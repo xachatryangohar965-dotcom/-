@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Խելացի ճոճանակ | Ֆիզիկայի խաղ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+<header class="top">
+<div class="brand">
+<div class="logo">⚖️</div>
+<div>
+<b>ԳԻՏՈՒԹՅՈՒՆԸ՝ ԽԱՂՈՎ</b>
+<span>9-րդ դասարանի նախագծային խաղ</span>
+</div>
+</div>
+<div class="pill">ԻՆՏԵՐԱԿՏԻՎ ԽԱՂ</div>
+</header>
+
+<section class="hero">
+<h1>Խելացի <em>ճոճանակ</em></h1>
+<p>Գտի՛ր հավասարակշռությունը․ խելացի՛ր, հաշվարկի՛ր և հաղթի՛ր։</p>
+</section>
+
+<main class="wrap">
+<section class="gamegrid">
+
+<article class="side left">
+<div class="sidehead">
+<span><i class="dot"></i> ՁԱԽ ԿՈՂՄ</span>
+<span>01</span>
+</div>
+<div class="person">
+<svg class="avatar" id="leftAvatar" viewBox="0 0 100 110" aria-label="Կերպար"></svg>
+<h3 id="leftName">Մեծ աղջիկ</h3>
+<div class="weight" id="leftWeight">40 կգ</div>
+</div>
+<div class="selectrow">
+<button id="leftPrev">‹</button>
+<select id="leftSelect"></select>
+<button id="leftNext">›</button>
+</div>
+<div class="control">
+<label>Նստելու հեռավորությունը <output id="leftOut">60 սմ</output></label>
+<input id="leftRange" type="range" min="10" max="150" value="60">
+<div class="ticks"><span>10 սմ</span><span>Կենտրոն</span><span>150 սմ</span></div>
+</div>
+</article>
+
+<section class="arena">
+<div class="arena-top">
+<span class="eyebrow">ՀԱՎԱՍԱՐԱԿՇՌՈՒԹՅԱՆ ՄԱՐՏԱՀՐԱՎԵՐ</span>
+<span class="level" id="level">ՓՈՒԼ 01</span>
+</div>
+<div class="status" id="status">Ընտրի՛ր կերպարներին և գտի՛ր ճիշտ հեռավորությունները։</div>
+<div class="scene">
+<div class="cloud"></div>
+<div class="sun"></div>
+<div class="ground"></div>
+<div class="beam" id="beam">
+<div class="endseat l"></div>
+<div class="endseat r"></div>
+</div>
+<div class="support"></div>
+<div class="pivot"></div>
+</div>
+<div class="momentrow">
+<div class="moment">
+<small>Ձախ կողմի մոմենտ</small>
+<b id="leftMoment">2400</b>
+<span> կգ·սմ</span>
+</div>
+<div class="moment r">
+<small>Աջ կողմի մոմենտ</small>
+<b id="rightMoment">2420</b>
+<span> կգ·սմ</span>
+</div>
+</div>
+<div class="actions">
+<button class="btn hint" id="hint">💡 Հուշում</button>
+<button class="btn soft" id="reset">↻ Վերակայել</button>
+<button class="btn primary" id="check">Ստուգել պատասխանը ✓</button>
+</div>
+<div class="scoreline">
+<span>⭐ Միավորներ՝ <strong id="score">0</strong></span>
+<span>🎯 Լուծված փուլեր՝ <strong id="rounds">0</strong></span>
+</div>
+</section>
+
+<article class="side right">
+<div class="sidehead">
+<span><i class="dot"></i> ԱՋ ԿՈՂՄ</span>
+<span>02</span>
+</div>
+<div class="person">
+<svg class="avatar" id="rightAvatar" viewBox="0 0 100 110" aria-label="Կերպար"></svg>
+<h3 id="rightName">Տատիկ</h3>
+<div class="weight" id="rightWeight">55 կգ</div>
+</div>
+<div class="selectrow">
+<button id="rightPrev">‹</button>
+<select id="rightSelect"></select>
+<button id="rightNext">›</button>
+</div>
+<div class="control">
+<label>Նստելու հեռավորությունը <output id="rightOut">44 սմ</output></label>
+<input id="rightRange" type="range" min="10" max="150" value="44">
+<div class="ticks"><span>10 սմ</span><span>Կենտրոն</span><span>150 սմ</span></div>
+</div>
+</article>
+
+</section>
+
+<section class="bottom">
+<div class="bottomhead">
+<h2>👥 Ընտրի՛ր խաղի կերպարներին</h2>
+<small>Սեղմի՛ր կերպարի վրա՝ ընտրելու համար</small>
+</div>
+<div class="characters" id="characters"></div>
+<div class="instructions">
+<span class="bulb">💡</span>
+<span>Հուշում․ ավելի ծանր կերպարը պետք է նստի կենտրոնին ավելի մոտ, իսկ թեթևը՝ ավելի հեռու։ Փորձի՛ր գտնել այնպիսի դիրքեր, որ ճոճանակը հավասարակշռվի։</span>
+</div>
+</section>
+</main>
+</div>
+
+<div class="modal" id="winModal">
+<div class="modalbox">
+<div class="trophy">🏆</div>
+<h2>Դու հաղթեցի՜ր։</h2>
+<p>Գերազանց աշխատանք․ ճոճանակը հավասարակշռության մեջ է։</p>
+<button class="btn primary" id="continue">Շարունակել խաղը</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
